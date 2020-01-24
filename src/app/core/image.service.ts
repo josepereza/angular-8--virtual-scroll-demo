@@ -168,4 +168,8 @@ export class ImageService {
   public getImages() {
     return of(this.imageCollections);
   }
+
+  public getImages2() {
+    return this.imageCollections;
+  }
 }

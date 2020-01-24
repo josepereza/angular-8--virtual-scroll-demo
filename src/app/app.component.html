@@ -9,10 +9,30 @@
     </div>
   </div>
 -->
-<cdk-virtual-scroll-viewport  style="height: 800px" itemSize="5" class="container-main">
+<!-- <cdk-virtual-scroll-viewport  style="height: 800px" itemSize="5" class="container-main">
   <ng-container  *cdkVirtualFor="let image of images$ | async"  >
     <img [src]="image.url">
   </ng-container>
 </cdk-virtual-scroll-viewport>
 <router-outlet></router-outlet>
+</div> -->
+
+<!-- <ul>
+<cdk-virtual-scroll-viewport  style="height: 800px" itemSize="5" class="container-main">
+  <ng-container  *cdkVirtualFor="let image of images"  >
+  <li>  <img [src]="image.url"> </li>
+  </ng-container>
+</cdk-virtual-scroll-viewport>
+</ul> -->
+
+<ul class="list">
+  <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="90" >
+    <ng-container *cdkVirtualFor="let image of images">
+      <li class="list-item"> <img [src]="image.url"> </li>
+    </ng-container>
+  </cdk-virtual-scroll-viewport>
+</ul>
+
+<router-outlet></router-outlet>
 </div>
+

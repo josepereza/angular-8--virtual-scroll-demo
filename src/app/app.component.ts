@@ -12,10 +12,12 @@ export class AppComponent {
   defaultImage = "http://via.placeholder.com/2100x80";
 
   public images$: Observable<{ url: string }[]>;
+  public images: { url: string }[];
 
   constructor(private imageService: ImageService) {}
 
   ngOnInit() {
     this.images$ = this.imageService.getImages();
+    this.images = this.imageService.getImages2();
   }
 }

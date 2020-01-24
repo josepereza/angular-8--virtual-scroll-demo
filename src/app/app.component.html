@@ -9,7 +9,7 @@
     </div>
   </div>
 -->
-<cdk-virtual-scroll-viewport  style="height: 500px" itemSize="5" class="container-main">
+<cdk-virtual-scroll-viewport  style="height: 800px" itemSize="5" class="container-main">
   <ng-container  *cdkVirtualFor="let image of images$ | async"  >
     <img [src]="image.url">
   </ng-container>

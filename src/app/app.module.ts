@@ -1,3 +1,4 @@
+import { ScrollingModule } from "@angular/cdk/scrolling";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
@@ -13,7 +14,8 @@ import { CoreModule } from "./core/core.module";
     HttpClientModule,
     // LazyLoadImageModule,
     CoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

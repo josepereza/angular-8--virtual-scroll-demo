@@ -3,10 +3,16 @@
   <h1>
     Welcome to {{title}}!
   </h1>
-  <div class="container-main">
+ <!-- <div class="container-main">
     <div  *ngFor="let image of images$ | async" >
       <img [src]="image?.url">
     </div>
   </div>
-  <router-outlet></router-outlet>
+-->
+<cdk-virtual-scroll-viewport  style="height: 500px" itemSize="5" class="container-main">
+  <ng-container  *cdkVirtualFor="let image of images$ | async"  >
+    <img [src]="image.url">
+  </ng-container>
+</cdk-virtual-scroll-viewport>
+<router-outlet></router-outlet>
 </div>

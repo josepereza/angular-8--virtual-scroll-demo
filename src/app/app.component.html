@@ -3,12 +3,13 @@
   <h1>
     Welcome to {{title}}!
   </h1>
-  <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="90" class="container-main">
-    <ng-container  *cdkVirtualFor="let image of images$ | async"  >
-      <img [src]="image.url">
-    </ng-container>
+  <ul class="list">
+  <cdk-virtual-scroll-viewport  style="height: 600px" itemSize="90" class="container-main">
+    <li   *cdkVirtualFor="let image of images$ | async" >
+     <img [src]="image.url">
+    </li>
   </cdk-virtual-scroll-viewport>
-
+</ul>
 
 <!--
 <ul class="list">

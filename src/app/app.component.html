@@ -1,16 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <ul class="list">
-  <cdk-virtual-scroll-viewport  style="height: 600px" itemSize="90" class="container-main">
-    <li   *cdkVirtualFor="let image of images$ | async" >
-      <img height="300" width="500" *ngIf="image?.url" [src]="image.url">
-    </li>
-  </cdk-virtual-scroll-viewport>
-</ul>
-
+<app-header></app-header>
+<main>
   <router-outlet></router-outlet>
-</div>
-
+</main>

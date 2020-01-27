@@ -1,6 +1,4 @@
 import { Component } from "@angular/core";
-import { Observable } from "rxjs";
-import { ImageService } from "./core/image.service";
 
 @Component({
   selector: "app-root",
@@ -10,11 +8,7 @@ import { ImageService } from "./core/image.service";
 export class AppComponent {
   title = "Virtual Scroll Demo";
 
-  public images$: Observable<{ url: string }[]>;
+  constructor() {}
 
-  constructor(private imageService: ImageService) {}
-
-  ngOnInit() {
-    this.images$ = this.imageService.getImages();
-  }
+  ngOnInit() {}
 }

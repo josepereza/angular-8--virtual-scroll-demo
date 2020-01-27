@@ -6,19 +6,10 @@
   <ul class="list">
   <cdk-virtual-scroll-viewport  style="height: 600px" itemSize="90" class="container-main">
     <li   *cdkVirtualFor="let image of images$ | async" >
-     <img [src]="image.url">
+      <img height="300" width="500" *ngIf="image?.url" [src]="image.url">
     </li>
   </cdk-virtual-scroll-viewport>
 </ul>
-
-<!--
-<ul class="list">
-  <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="90" >
-    <ng-container *cdkVirtualFor="let image of images$ | async">
-      <li class="list-item"> <img [src]="image.url"> </li>
-    </ng-container>
-  </cdk-virtual-scroll-viewport>
-</ul> -->
 
   <router-outlet></router-outlet>
 </div>

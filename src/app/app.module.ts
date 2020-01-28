@@ -1,4 +1,3 @@
-import { ScrollingModule } from "@angular/cdk/scrolling";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "./app-routing.module";
@@ -8,13 +7,7 @@ import { LazyloadImagesModule } from "./lazyload-images/lazyload-images.module";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    CoreModule,
-    LazyloadImagesModule,
-    ScrollingModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, CoreModule, LazyloadImagesModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })

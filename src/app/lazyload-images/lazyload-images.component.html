@@ -3,11 +3,9 @@
   <h2>
     Demo - Lazy Load Images
   </h2>
-  <ul class="list">
- <!-- <cdk-virtual-scroll-viewport  style="height: 600px" itemSize="90" class="container-main">
-    <li   *cdkVirtualFor="let image of images$ | async" >
-      <img height="300" width="500" *ngIf="image?.url" [src]="image.url">
-    </li>
-  </cdk-virtual-scroll-viewport> -->
-  </ul>
+  <div class="container-main">
+    <div  *ngFor="let image of images$ | async; let i = index; trackBy: trackByIdx" >
+      <img *ngIf="image?.url" [defaultImage]="defaultImage" [lazyLoad]="image?.url" [errorImage]="errorImage">
+    </div>
+  </div>
 </div>
